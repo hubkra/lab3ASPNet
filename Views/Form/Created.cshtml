@@ -1,0 +1,14 @@
+﻿@model Lab3_test3.Models.FormModel
+@{
+    ViewData["Title"] = "Lab3-Zadanko";
+    string userName = Model.Name;
+    int numb = Model.numRepeat;
+}
+<div class="text-left">
+    <h1 class="display-4">Dane z formularza</h1>
+    @Html.DisplayNameFor(model => model.Name):      @{ for (int i = 0; i < numb; i++)
+        { <p>@userName</p>}}
+    <br />
+    @Html.DisplayNameFor(model => model.numRepeat):  @Html.DisplayFor(model => model.numRepeat)
+</div>
+<p>Formularz został wypełniony!</p>
